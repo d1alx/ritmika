@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РИТМИКА — Электрогитары для технической и скоростной игры</title>
+    <meta name="description"
+        content="РИТМИКА – электростаротипы, созданные для музыкантов, которые ценят скорость, лёгкость и чистый звук. Откройте свободу игры без компромиссов. Доставка по всей России.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Unbounded:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#hero" class="logo" id="logo-link">
+                <span class="logo__icon"><span class="logo__r">R</span></span>
+                <span class="logo__text">ИТМИКА</span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#series" class="nav__link">Линейки</a>
+                <a href="#tech" class="nav__link">Технологии</a>
+                <a href="#try" class="nav__link">Попробовать</a>
+                <a href="#contact" class="nav__link">Контакты</a>
+            </nav>
+            <div class="header__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+                    <svg class="theme-icon theme-icon--light" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="theme-icon theme-icon--dark" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                    </svg>
+                </button>
+                <button class="cart-btn" id="cart-btn" aria-label="Корзина">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 01-8 0" />
+                    </svg>
+                    <span class="cart-btn__count" id="cart-count">0</span>
+                </button>
+                <button class="burger" id="burger" aria-label="Меню">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero__bg" id="hero-bg"></div>
+        <div class="hero__overlay"></div>
+        <div class="container hero__content">
+            <p class="hero__label anim">Электрогитары, которые ускоряют ваш звук</p>
+            <button class="riff-btn anim" id="riff-btn" aria-label="Послушать звук РИТМИКА">
+                <span class="riff-btn__ring"></span>
+                <span class="riff-btn__ring riff-btn__ring--2"></span>
+                <span class="riff-btn__icon">
+                    <svg class="riff-btn__play" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                    <svg class="riff-btn__stop" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"
+                        style="display:none">
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                    </svg>
+                </span>
+                <span class="riff-btn__text">Услышь звук РИТМИКА</span>
+                <span class="riff-btn__eq" id="riff-eq">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </span>
+            </button>
+            <audio id="riff-audio" preload="auto" src="audio/riff.mp3"></audio>
+            <h1 class="hero__title anim">Играй<br><em>на опережение</em></h1>
+            <p class="hero__desc anim">Тонкие грифы, почти без веса и кристально чистый звук – всё, что нужно, чтобы ваш стиль звучал без лишних преград.</p>
+            <div class="hero__actions anim">
+                <a href="#series" class="btn btn--primary">Выбрать гитару</a>
+                <a href="#philosophy" class="btn btn--outline">О бренде</a>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <span>Узнать больше</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+            <span class="marquee__item">СКОРОСТЬ</span><span class="marquee__sep">✦</span>
+            <span class="marquee__item">ЭРГОНОМИКА</span><span class="marquee__sep">✦</span>
+            <span class="marquee__item">ТОЧНОСТЬ</span><span class="marquee__sep">✦</span>
+            <span class="marquee__item">КОНТРОЛЬ</span><span class="marquee__sep">✦</span>
+            <span class="marquee__item">ЗВУК</span><span class="marquee__sep">✦</span>
+            <span class="marquee__item">СВОБОДА</span><span class="marquee__sep">✦</span>
+            <span class="marquee__item">СКОРОСТЬ</span><span class="marquee__sep">✦</span>
+            <span class="marquee__item">ЭРГОНОМИКА</span><span class="marquee__sep">✦</span>
+            <span class="marquee__item">ТОЧНОСТЬ</span><span class="marquee__sep">✦</span>
+            <span class="marquee__item">КОНТРОЛЬ</span><span class="marquee__sep">✦</span>
+            <span class="marquee__item">ЗВУК</span><span class="marquee__sep">✦</span>
+            <span class="marquee__item">СВОБОДА</span><span class="marquee__sep">✦</span>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="philosophy" id="philosophy">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label anim">Философия</span>
+                <h2 class="section-title anim">Гитара, которая <span style="color: #e53e3e;">почти исчезает</span> в ваших руках</h2>
+                <p class="section-desc anim">Без лишних тяжестей, без сопротивления, без компромиссов – только чистый поток нот, который позволяет полностью сосредоточиться на музыке.</p>
+            </div>
+            <div class="pillars">
+                <div class="pillar anim">
+                    <div class="pillar__num">01</div>
+                    <h3 class="pillar__title">Нулевое сопротивление</h3>
+                    <p class="pillar__desc">Сатиновые грифы и идеально сбалансированный корпус делают игру длительные часы без усталости.</p>
+                </div>
+                <div class="pillar anim">
+                    <div class="pillar__num">02</div>
+                    <h3 class="pillar__title">Звук без компромиссов</h3>
+                    <p class="pillar__desc">Тональные возможности каждой серии – от теплого CORE до агрессивного SHRED и точного APEX.</p>
+                </div>
+                <div class="pillar anim">
+                    <div class="pillar__num">03</div>
+                    <h3 class="pillar__title">Дизайн будущего</h3>
+                    <p class="pillar__desc">Современные линии и инновационные материалы, которые помогают вам играть быстрее и комфортнее.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGY -->
+    <section class="tech" id="tech">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label anim">Технологии</span>
+                <h2 class="section-title anim">Инженерия, которую <em>вы ощущаете</em></h2>
+                <p class="section-desc anim">Каждая деталь построена так, чтобы звук и комфорт шли рука об руку, без лишних преград.</p>
+            </div>
+            <div class="tech__grid">
+                <div class="tech-card anim">
+                    <div class="tech-card__icon">🎯</div>
+                    <h3 class="tech-card__title">Компаунд-радиус грифа</h3>
+                    <p class="tech-card__desc">Плоский верхний радиус для лёгких бендов и мягкий нижний – идеальная эргономика для любой позиции.</p>
+                </div>
+                <div class="tech-card anim">
+                    <div class="tech-card__icon">⚡</div>
+                    <h3 class="tech-card__title">Стальные лады</h3>
+                    <p class="tech-card__desc">Нержавеющие лады гарантируют долговечность и плавный скольжение при быстрых приёмах.</p>
+                </div>
+                <div class="tech-card anim">
+                    <div class="tech-card__icon">🔥</div>
+                    <h3 class="tech-card__title">Фирменные звукосниматели</h3>
+                    <p class="tech-card__desc">Специальные звукосниматели каждой серии дают точный спектр от чистого кристалла до мощного хай‑гейна.</p>
+                </div>
+                <div class="tech-card anim">
+                    <div class="tech-card__icon">🪶</div>
+                    <h3 class="tech-card__title">Облегчённый корпус</h3>
+                    <p class="tech-card__desc">Лёгкий корпус без потери сустейна позволяет играть часами без усталости.</p>
+                </div>
+                <div class="tech-card anim">
+                    <div class="tech-card__icon">📐</div>
+                    <h3 class="tech-card__title">Мультимензура</h3>
+                    <p class="tech-card__desc">В серии APEX: длинные низкие струны для плотного баса, короткие высокие – для точных нот.</p>
+                    
+                </div>
+                <div class="tech-card anim">
+                    <div class="tech-card__icon">🔧</div>
+                    <h3 class="tech-card__title">Фурнитура без люфтов</h3>
+                    <p class="tech-card__desc">Колки с высоким передаточным числом, прочный тремоло‑блок и закалённые седла обеспечивают стабильный строй.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERIES -->
+    <section class="series" id="series">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label anim">Линейки</span>
+                <h2 class="section-title anim">Найди <em>свою</em> серию</h2>
+                <p class="section-desc anim">Три серии — три подхода к игре. Каждая создана под конкретные задачи и
+                    стиль.</p>
+            </div>
+            <div class="series__tabs anim">
+                <button class="series-tab active" data-series="core">
+                    <span class="series-tab__name">CORE</span>
+                    <span class="series-tab__desc">Начни с лучшего</span>
+                </button>
+                <button class="series-tab" data-series="shred">
+                    <span class="series-tab__name">SHRED</span>
+                    <span class="series-tab__desc">Скорость без границ</span>
+                </button>
+                <button class="series-tab" data-series="apex">
+                    <span class="series-tab__name">APEX</span>
+                    <span class="series-tab__desc">За пределами возможного</span>
+                </button>
+            </div>
+            <div class="series__content" id="series-content">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- TRY BEFORE BUY -->
+    <section class="try" id="try">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label anim">Попробуй до покупки</span>
+                <h2 class="section-title anim">Услышь <em>вживую</em></h2>
+                <p class="section-desc anim">Познайте гитару лично — в магазине‑партнёре или в пункте выдачи, без риска и с поддержкой специалистов.</p>
+            </div>
+            <div class="try__grid">
+                <div class="try-card try-card--premium anim">
+                    <div class="try-card__badge">Рекомендуем</div>
+                    <div class="try-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                    </div>
+                    <h3 class="try-card__title">Магазин-партнёр</h3>
+                    <p class="try-card__subtitle">Полный опыт знакомства</p>
+                    <ul class="try-card__list">
+                        <li>Играйте на разных комбоусилителях</li>
+                        <li>Профессионал продемонстрирует возможности</li>
+                        <li>Сравните несколько моделей на месте</li>
+                        <li>Получите консультацию по настройке</li>
+                        <li>Заберите гитару сразу</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--primary btn--sm">Найти магазин рядом</a>
+                </div>
+                <div class="try-card anim">
+                    <div class="try-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="1" y="3" width="15" height="13" />
+                            <polygon points="16 8 20 5 20 16 16 13 16 8" />
+                            <line x1="1" y1="20" x2="22" y2="20" />
+                            <line x1="5" y1="20" x2="5" y2="16" />
+                            <line x1="18" y1="20" x2="18" y2="16" />
+                        </svg>
+                    </div>
+                    <h3 class="try-card__title">Пункт выдачи</h3>
+                    <p class="try-card__subtitle">Попробуйте перед оплатой</p>
+                    <ul class="try-card__list">
+                        <li>Осмотрите гитару лично</li>
+                        <li>Оцените вес и эргономику</li>
+                        <li>Проверьте качество сборки</li>
+                        <li>Поиграйте без подключения</li>
+                        <li>Откажитесь бесплатно, если не подошла</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--outline btn--sm">Подробнее о доставке</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label anim">Отзывы</span>
+                <h2 class="section-title anim">Что говорят <em>музыканты</em></h2>
+            </div>
+            <div class="reviews__grid">
+                <div class="review-card anim">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">«Взял SHRED S-6 для репетиций — гриф как масло, пальцы летают. После
+                        моего старого Jackson это просто космос. А ещё она весит как пушинка.»</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">АК</div>
+                        <div>
+                            <div class="review-card__name">Алексей К.</div>
+                            <div class="review-card__role">Гитарист, Metalcore</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card anim">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">«APEX A-8 MS — первая восьмиструнка, на которой мне реально удобно
+                        играть. Мультимензура и тонкий гриф решают. Интонация идеальная на всех ладах.»</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">МД</div>
+                        <div>
+                            <div class="review-card__name">Михаил Д.</div>
+                            <div class="review-card__role">Djent / Progressive Metal</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card anim">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">«Купил CORE C-6 как первую серьёзную гитару. Выглядит на миллион,
+                        играет легко. В магазине-партнёре всё показали и настроили — лучший сервис.»</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">ДВ</div>
+                        <div>
+                            <div class="review-card__name">Дмитрий В.</div>
+                            <div class="review-card__role">Начинающий гитарист</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <div class="cta__inner">
+                <div class="cta__text">
+                    <span class="section-label anim">Свяжитесь с нами</span>
+                    <h2 class="section-title anim">Поможем <em>выбрать</em></h2>
+                    <p class="section-desc anim">Расскажите о своём стиле игры и задачах — подберём серию и модель,
+                        которая подойдёт именно вам. Перезвоним в течение 15 минут.</p>
+                </div>
+                <form class="cta__form anim" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="form-name" placeholder="Как к вам обращаться" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="form-phone" placeholder="Ваш телефон (+7…)" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="form-series">
+                            <option value="" disabled selected>Какая серия интересует?</option>
+                            <option value="core">CORE — начинающим и любителям</option>
+                            <option value="shred">SHRED — для скоростной игры</option>
+                            <option value="apex">APEX — расширенный диапазон</option>
+                            <option value="unknown">Пока не знаю, помогите выбрать</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="form-message" placeholder="Опишите ваш стиль, задачи и желания..."
+                            rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+                    <p class="cta__privacy">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <a href="#hero" class="logo">
+                    <span class="logo__icon"><span class="logo__r">R</span></span>
+                    <span class="logo__text">ИТМИКА</span>
+                </a>
+                <p class="footer__desc">Российский гитарный бренд. Эргономичные электрогитары для технической и
+                    скоростной игры.</p>
+            </div>
+            <div class="footer__links">
+                <h4>Линейки</h4>
+                <a href="#series">CORE Series</a>
+                <a href="#series">SHRED Series</a>
+                <a href="#series">APEX Series</a>
+            </div>
+            <div class="footer__links">
+                <h4>Навигация</h4>
+                <a href="#tech">Технологии</a>
+                <a href="#try">Попробовать</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contact">Контакты</a>
+            </div>
+            <div class="footer__contact">
+                <h4>Контакты</h4>
+                <a href="tel:+78001234567">8 (800) 123-45-67</a>
+                <a href="mailto:info@ritmika-guitars.ru">info@ritmika-guitars.ru</a>
+                <p>Москва, ул. Музыкальная, 42</p>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>© 2026 РИТМИКА. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
